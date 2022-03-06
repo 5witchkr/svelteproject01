@@ -26,9 +26,12 @@ import { login, join, mainpage,pizza} from "../store/writalbeStore.js";
 <head>
 	<meta charset="utf-8"/>
 </head>
-<body in:fade={{duration:2000}} out:fade={{duration:300}} style="text-align:center; height:970px; display: flex;" class="mainbackground">
+<body style="text-align:center; height:970px; display: flex;" class="mainbackground">
     <div class="map_wrap">
-	<div in:fly="{{ y: -300, duration: 2000 }}" id="map" class="shadow-lg p-3 mb-5 bg-body rounded" style="width:400px; height:200px; display: flex; border: solid 1px gray; border-radius:30px; margin-top:20px; margin-bottom:20px"></div>
+    <div style="display: flex;">
+	    <div in:fly="{{ y: -300, duration: 2000 }}" id="map" class="shadow-lg p-3 mb-5 bg-body rounded" style="width:400px; height:200px; display: flex; border: solid 1px gray; border-radius:30px; margin-top:20px; margin-bottom:20px"></div>
+        <div in:fly="{{ x: 300, duration: 2000 }}" style="width:400px;"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FDtZ3i%2Fbtru8WnJQ2S%2FHSTXBB2SvAWxmI8eX7bkP0%2Fimg.png" style="border-radius: 3em; width:50%; margin-top:20px; margin-bottom:20px"></div>
+    </div>
     <div style="display: flex;">
         <div id="menu_wrap" class="bg_white" in:fly="{{ x: -300, duration: 2000 }}" >
             <div class="option">
@@ -301,7 +304,7 @@ import { login, join, mainpage,pizza} from "../store/writalbeStore.js";
 
 <style>
 	.mainbackground{
-		background:linear-gradient(250deg, rgb(255, 163, 109), rgb(212, 98, 98));;
+		background:linear-gradient(250deg, rgb(255, 163, 109), rgb(212, 98, 98));
 		display:flex;
 		flex-direction:column;
 		height:100%;

@@ -13,7 +13,7 @@
     let result = null
 	
 	async function doLogin () {
-		const res = await fetch('https://projectsvtnew.herokuapp.com/user/login', {
+		const res = await fetch('http://127.0.0.1:8000/user/login', {
             headers:{'Content-Type':'application/json'},
 			method: 'POST',
 			body: JSON.stringify({

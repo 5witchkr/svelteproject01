@@ -15,7 +15,7 @@ import { dataset_dev } from 'svelte/internal';
     let result = null
 	
 	async function doJoin () {
-		const res = await fetch('https://projectsvtnew.herokuapp.com/user/regist', {
+		const res = await fetch('http://127.0.0.1:8000/user/regist', {
             headers:{'Content-Type':'application/json'},
 			method: 'POST',
 			body: JSON.stringify({
